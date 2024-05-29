@@ -7,6 +7,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
 }
 
 .content {
@@ -19,9 +20,11 @@
 }
 
 .content #color {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    font-weight: 600;
     color: #fff;
-    padding: 1.25em 3em;
+    padding: 1.25em 2em;
+    width: 300px;
     margin: 1em;
     min-width: 350px;
     text-align: center;
@@ -33,9 +36,9 @@
 }
 
 .content #btn {
-    padding: 1em 2em;
+    padding: 1em 1.7em;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: .9em;
     border: none;
     background-color: #151515;
     color: #EEEEEE;
@@ -44,7 +47,6 @@
   user-select: none;
 }
 .content #btn:active {
-    /* transform: scale(1.2); */
-    transform: translateY(10px);
+    transform: translateY(20px);
     transition: 0.5s ease;
 }

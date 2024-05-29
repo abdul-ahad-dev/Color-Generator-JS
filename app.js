@@ -1,39 +1,19 @@
-// let red = Math.floor(Math.random()*255)
-// let blue = Math.floor(Math.random()*255)
-// let green = Math.floor(Math.random()*255)
 
-// // let colorGenerate = document.getElementById('btn')
+const hexValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+const button = document.querySelector('#btn');
+const body = document.querySelector('body');
+const value = document.querySelector('#code')
 
-// let body = document.getElementById('bg')
-// let colorGenerate = document.getElementById('btn').addEventListener('click', ()=>{
-//     let color = document.getElementById('code');
-//     color.innerHTML = `rbg(${red}, ${blue}, ${green})`
-//     body.style.background = `rbg(${red}, ${blue}, ${green});`
-// })
+button.addEventListener('click', changeHex)
 
-// setInterval(colorGenerate, 1000);
+function changeHex()
+{
+    let hex = '#'
 
-
-
-let body = document.getElementById('bg');
-let colorGenerate = document.getElementById('btn').addEventListener('click', () => {
-    let red = Math.floor(Math.random() * 255);
-    let blue = Math.floor(Math.random() * 255);
-    let green = Math.floor(Math.random() * 255);
-    console.log(red,blue,green);
-    let color = document.getElementById('code');
-    color.innerHTML = `rgb(${red}, ${blue}, ${green});`;
-    body.style.background = `rgb(${red}, ${blue}, ${green})`;
-});
-
-// If you want to change the color automatically every second, you can do this:
-setInterval(() => {
-    let red = Math.floor(Math.random() * 255);
-    let blue = Math.floor(Math.random() * 255);
-    let green = Math.floor(Math.random() * 255);
-    
-    console.log(red,blue,green);
-    let color = document.getElementById('code');
-    color.innerHTML = `rgb(${red}, ${blue}, ${green});`;
-    body.style.background = `rgb(${red}, ${blue}, ${green})`;
-}, 5000);
+    for (let i = 0; i < 6; i++) {
+        const index = Math.floor(Math.random() * hexValues.length)
+        hex += hexValues[index]
+    }
+    value.textContent = hex
+    body.style.backgroundColor = hex
+}
